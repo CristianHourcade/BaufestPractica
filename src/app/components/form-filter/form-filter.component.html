@@ -1,0 +1,25 @@
+<div class="container my-3">
+  <div class="row mb-3">
+    <div class="col-12">
+      <h3>Football Player Finder</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-12">
+      <input type="text" name="name" [(ngModel)]="name" (keyup.enter)="sendNombre()" placeholder="Player Name">
+      <p class="text-danger" *ngIf="nameError">* No se permiten caracteres especiales.</p>
+    </div>
+    <div class="col-md-3 col-12">
+      <input type="text" placeholder="Position" [(ngModel)]="position" name="position" (keyup.enter)="sendPosition()">
+
+    </div>
+    <div class="col-md-3 col-12">
+      <input type="text" placeholder="Age" [(ngModel)]="age" name="age" (keyup.enter)="sendAge()">
+      <p class="text-danger" *ngIf="ageError">* Solo numeros.</p>
+
+    </div>
+    <div class="col-md-3 col-12">
+      <input type="button" value="Search" (click)="search()">
+    </div>
+  </div>
+</div>

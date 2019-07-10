@@ -1,0 +1,3 @@
+
+<app-form-filter (namefilter)="nameFilter($event)" (positionfilter)="positionFilter($event)" (agefilter)="ageFilter($event)"></app-form-filter>
+<app-table-players [name]="nameToFilter" [position]="positionToFilter" [age]="ageToFilter" ></app-table-players>

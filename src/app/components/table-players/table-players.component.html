@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table-striped table table-bordered" *ngIf="JsonPlayer">
+        <tr>
+          <th>Name </th>
+          <th>Position</th>
+          <th>Nationality</th>
+          <th>Age</th>
+        </tr>
+        <tr *ngFor="let player of JsonPlayer">
+          <td>{{player.name}}</td>
+          <td>{{player.position}}</td>
+          <td>{{player.nationality}}</td>
+          <td>{{player.dateOfBirth | calculeAge}}</td>
+        </tr>
+      </table>
+      <h4 *ngIf="!JsonPlayer">Loading...</h4>
+      <div *ngIf="JsonPlayer">
+        <h5 *ngIf="JsonPlayer.length === 0"> Sin resultados en la busqueda :'(</h5>
+      </div>
+    </div>
+  </div>
+</div>
